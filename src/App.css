@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+background-color: #34B3FF;
+padding: 20px;
+}
+
+.frame-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 40px);
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex : 1
+}
+.form-heading {
+  margin-top: 0;
+}
+.required {
+  color: #ff0000;
+}
+.form-wrapper {
+  padding: 20px;
+  background-color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: calc(100vh - 150px);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form-inner-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.form-inner-wrapper form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.form-action {
+  margin-top: auto;
+  text-align: right;
+}
+.input-error {
+  color : red;
+  font-size : 12px;
+  margin-top : 0
+}
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.input-wrapper {
+  width: 50%;
+  padding: 0 15px;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.input-field.error {
+  border-color: #ff0000;
+}
+.input-label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.submit-btn {
+  color : #ffffff;
+  background-color: #34B3FF;
+  outline: none;
+  border : none;
+  padding: 8px 10px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.donut {
+  display: inline-block;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-left-color:#34B3FF;
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  animation: donut-spin 0.5s linear infinite;
+}
+
+@keyframes donut-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 575px) {
+  body {
+    padding: 0;
+  }
+  .frame-wrapper{
+    height: 100vh;
+  }
+  .form-wrapper {
+    height: 100%;
+  }
+  .input-wrapper {
+    width: 100%;
+  }
+  
+}
